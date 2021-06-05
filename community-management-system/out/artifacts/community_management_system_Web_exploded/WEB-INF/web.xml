@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>shetuan</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <filter>
+    <filter-name>CharacterFilter</filter-name>
+    <filter-class>com.shetuan.filter.CharacterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>PermissionFilter</filter-name>
+    <filter-class>com.shetuan.filter.PermissionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PermissionFilter</filter-name>
+    <url-pattern>/info/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginOutServelt</servlet-name>
+    <servlet-class>com.shetuan.servelt.LoginOutServelt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginOutServelt</servlet-name>
+    <url-pattern>/loginOut</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>RegistServlet</display-name>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.RegistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/Regist</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>UpdateServlet</display-name>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/admin/Update</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>QueryServlet</display-name>
+    <servlet-name>QueryServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.QueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryServlet</servlet-name>
+    <url-pattern>/admin/Query</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>CommunityServelt</display-name>
+    <servlet-name>CommunityServelt</servlet-name>
+    <servlet-class>com.shetuan.servelt.CommunityServelt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommunityServelt</servlet-name>
+    <url-pattern>/admin/Community</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>AdminServlet</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.ToAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>ToIndex</display-name>
+    <servlet-name>ToIndex</servlet-name>
+    <servlet-class>com.shetuan.servelt.ToIndex</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToIndex</servlet-name>
+    <url-pattern>/toIndex</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>MemberInfoServlet</display-name>
+    <servlet-name>MemberInfoServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.MemberInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberInfoServlet</servlet-name>
+    <url-pattern>/MemberInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CommunityInfoServlet</display-name>
+    <servlet-name>CommunityInfoServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.CommunityInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommunityInfoServlet</servlet-name>
+    <url-pattern>/CommunityInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ActivityInfoServlet</display-name>
+    <servlet-name>ActivityInfoServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.ActivityInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityInfoServlet</servlet-name>
+    <url-pattern>/ActivityInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>MemberInfoUpdate</display-name>
+    <servlet-name>MemberInfoUpdate</servlet-name>
+    <servlet-class>com.shetuan.servelt.MemberInfoUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberInfoUpdate</servlet-name>
+    <url-pattern>/MemberInfoUpdate</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>NoticeInfoUpdate</display-name>
+    <servlet-name>NoticeInfoUpdate</servlet-name>
+    <servlet-class>com.shetuan.servelt.NoticeInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NoticeInfoUpdate</servlet-name>
+    <url-pattern>/NoticeInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>SearchServlet</display-name>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.shetuan.servelt.SearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/admin/Search</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GithubLogingCallBack</display-name>
+    <servlet-name>GithubLogingCallBack</servlet-name>
+    <servlet-class>com.shetuan.servelt.GithubLogingCallBack</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GithubLogingCallBack</servlet-name>
+    <url-pattern>/GithubLogingCallBack</url-pattern>
+  </servlet-mapping>
+
+<!--    德鲁伊监控配置-->
+    <filter>
+      <filter-name>DruidWebStatFilter</filter-name>
+      <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+      <init-param>
+        <!-- 经常需要排除一些不必要的url，比如.js,/jslib/等等。配置在init-param中 -->
+        <param-name>exclusions</param-name>
+        <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+      </init-param>
+      <!-- 缺省sessionStatMaxCount是1000个。你可以按需要进行配置 -->
+      <init-param>
+        <param-name>sessionStatMaxCount</param-name>
+        <param-value>1000</param-value>
+      </init-param>
+      <!-- druid 0.2.7版本开始支持profile，配置profileEnable能够监控单个url调用的sql列表 -->
+      <init-param>
+        <param-name>profileEnable</param-name>
+        <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>principalSessionName</param-name>
+        <param-value>users.username</param-value>
+      </init-param>
+      <!-- 你可以关闭session统计功能
+      <init-param>
+          <param-name>sessionStatEnable</param-name>
+          <param-value>true</param-value>
+      </init-param> -->
+    </filter>
+
+  <!--  德鲁伊sql监控配置-->
+    <servlet>
+      <servlet-name>DruidStatView</servlet-name>
+      <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+      <!--
+          deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝。
+          如果allow没有配置或者为空，则允许所有访问
+       -->
+  <!--    <init-param>-->
+  <!--      <param-name>allow</param-name>-->
+  <!--      <param-value>128.242.127.1/24,127.0.0.1</param-value>-->
+  <!--    </init-param>-->
+<!--      <init-param>-->
+  <!--      <param-name>deny</param-name>-->
+  <!--      <param-value>192.168.1.118</param-value>-->
+  <!--    </init-param>-->
+      <!-- 在StatViewSerlvet输出的html页面中，有一个功能是Reset All，执行这个操作之后，会导致所有计数器清零，重新计数 -->
+  <!--    <span style="white-space:pre"> </span><init-param>-->
+  <!--    <span style="white-space:pre">    </span><param-name>resetEnable</param-name>-->
+  <!--    <span style="white-space:pre">    </span><param-value>false</param-value>-->
+  <!--    <span style="white-space:pre">    </span></init-param>-->
+  <!--    <span style="white-space:pre">    </span>&lt;!&ndash;  用户名和密码 &ndash;&gt;-->
+  <!--    <span style="white-space:pre">    </span><init-param>-->
+<!--      <param-name>loginUsername</param-name>-->
+<!--      <param-value>druid</param-value>-->
+<!--    </init-param>-->
+<!--      <init-param>-->
+<!--        <param-name>loginPassword</param-name>-->
+<!--        <param-value>druid</param-value>-->
+<!--      </init-param>-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DruidStatView</servlet-name>
+      <url-pattern>/druid/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
